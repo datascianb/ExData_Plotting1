@@ -1,5 +1,5 @@
 ##read data in unzipped file
-my_data <- read.table("Individual household electric power consumption Data Set.txt", sep=";", header = TRUE)
+my_data <- read.table(paste(getwd(),"/Individual household electric power consumption Data Set.txt",sep=""), sep=";", header = TRUE)
 
 ## subset data for required dates
 my_data2 <- filter(my_data, my_data$Date == "2/2/2007" | my_data$Date == "1/2/2007")
